@@ -1,0 +1,48 @@
+<!Doctype html>
+<html lang="en" class="fade-in">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" href="/frontend/assets/favicons.png" />
+    <title>Login • Auth UI</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body data-page="login">
+    <main class="container">
+        <section class="card card-accent" aria-labelledby="login-title">
+            <header class="card-header">
+                <h1 id="login-title" class="card-title">Welcome back</h1>
+                <p class="card-subtitle">Sign in to continue to your dashboard.</p>
+            </header>
+
+            <div id="login-message" class="visually-hidden" aria-live="polite"></div>
+
+            <form id="login-form" class="form" novalidate>
+                <div class="form-row">
+                    <label for="login-username">Username</label>
+                    <input id="login-username" name="username" type="text" inputmode="text" autocomplete="username"
+                        required placeholder="e.g. johndoe" />
+                </div>
+                <div class="form-row">
+                    <label for="login-password">Password</label>
+                    <input id="login-password" name="password" type="password" autocomplete="current-password" required
+                        placeholder="Your password" />
+                </div>
+
+                <button type="submit" class="btn btn-primary w-full">Sign in</button>
+
+                <div class="form-footer">
+                    <a href="forgot.html" data-transition class="link">Forgot password?</a>
+                    <span class="muted">•</span>
+                    <a href="signup.html" data-transition class="link">Create an account</a>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <script src="script.js" defer></script>
+</body>
+
+</html>

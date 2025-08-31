@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en" class="fade-in">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Dashboard • Auth UI</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body data-page="dashboard">
+    <main class="container">
+        <section class="card" aria-labelledby="dash-title">
+            <header class="card-header card-header-row">
+                <div>
+                    <h1 id="dash-title" class="card-title">Dashboard</h1>
+                    <p class="card-subtitle">Here’s a quick overview of your account.</p>
+                </div>
+                <button id="logout-btn" class="btn btn-ghost">Log out</button>
+            </header>
+
+            <div class="dashboard-grid">
+                <!-- Left nav -->
+                <aside class="dash-left panel" aria-label="Navigation">
+                    <nav class="side-nav">
+                        <ul class="list">
+                            <li><a class="side-link is-active" href="#" aria-current="page">Home</a></li>
+                            <li><a class="side-link" href="#" role="button">Explore</a></li>
+                            <li><a class="side-link" href="#" role="button">Messages</a></li>
+                            <li><a class="side-link" href="#" role="button">Bookmarks</a></li>
+                            <li><a class="side-link" href="#" role="button">Settings</a></li>
+                        </ul>
+                    </nav>
+                </aside>
+
+                <!-- Center: composer + feed -->
+                <section class="dash-center">
+                    <div id="dashboard-message" class="visually-hidden" aria-live="polite"></div>
+
+                    <!-- Composer -->
+                    <form id="composer-form" class="composer tile" aria-label="Create post">
+                        <div class="avatar" aria-hidden="true">U</div>
+                        <div class="composer-main">
+                            <label for="composer-text" class="visually-hidden">Write a post</label>
+                            <textarea id="composer-text" class="composer-input" rows="3" placeholder="What's happening?"
+                                maxlength="300"></textarea>
+                            <div class="composer-actions">
+                                <span class="muted" id="composer-count" aria-live="polite">0/300</span>
+                                <button class="btn btn-primary" type="submit">Post</button>
+                            </div>
+                        </div>
+                    </form>
+
+                    <!-- Feed -->
+                    <ul id="feed-list" class="list feed-list" aria-live="polite" aria-label="Feed"></ul>
+                </section>
+
+                <!-- Right sidebar: profile, stats, actions, activity, suggestions -->
+                <aside class="dash-right">
+                    <section class="panel">
+                        <h2 class="section-title">Your profile</h2>
+                        <ul class="list">
+                            <li><span class="muted">Username:</span> <strong id="profile-username">—</strong></li>
+                            <li><span class="muted">Email:</span> <strong id="profile-email">—</strong></li>
+                            <li><span class="muted">Date of birth:</span> <strong id="profile-dob">—</strong></li>
+                            <li><span class="muted">Joined:</span> <strong id="profile-created">—</strong></li>
+                        </ul>
+                    </section>
+
+                    <section aria-label="Recent activity" class="panel">
+                        <h2 class="section-title">Recent activity</h2>
+                        <ul id="activity-list" class="list activity-list"></ul>
+                    </section>
+
+                </aside>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js" defer></script>
+</body>
+
+</html>

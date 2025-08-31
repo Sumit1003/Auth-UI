@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en" class="fade-in">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sign Up • Auth UI</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body data-page="signup">
+    <main class="container">
+        <section class="card card-accent" aria-labelledby="signup-title">
+            <header class="card-header">
+                <h1 id="signup-title" class="card-title">Create your account</h1>
+                <p class="card-subtitle">It’s quick and only takes a minute.</p>
+            </header>
+
+            <div id="signup-message" class="visually-hidden" aria-live="polite"></div>
+
+            <form id="signup-form" class="form" novalidate>
+                <div class="form-row">
+                    <label for="signup-username">Username</label>
+                    <input id="signup-username" name="username" type="text" autocomplete="username" required
+                        placeholder="e.g. johndoe" />
+                </div>
+                <div class="form-row">
+                    <label for="signup-email">Email</label>
+                    <input id="signup-email" name="email" type="email" autocomplete="email" required
+                        placeholder="you@example.com" />
+                </div>
+                <div class="form-row">
+                    <label for="signup-dob">Date of birth</label>
+                    <input id="signup-dob" name="dob" type="date" required />
+                </div>
+                <div class="form-row">
+                    <label for="signup-password">Password</label>
+                    <input id="signup-password" name="password" type="password" autocomplete="new-password" required
+                        placeholder="At least 6 characters" />
+                </div>
+                <div class="form-row">
+                    <label for="signup-confirm">Confirm password</label>
+                    <input id="signup-confirm" name="confirm" type="password" autocomplete="new-password" required
+                        placeholder="Retype your password" />
+                </div>
+
+                <button type="submit" class="btn btn-primary w-full">Create account</button>
+
+                <div class="form-footer">
+                    <span class="muted">Already have an account?</span>
+                    <a href="index.html" data-transition class="link">Sign in</a>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <script src="script.js" defer></script>
+</body>
+
+</html>
